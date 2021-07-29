@@ -1,0 +1,12 @@
+C:\Users\msurm\csharp-practice\Class3\RestaurantMenu\RestaurantMenu\bin\Debug\netcoreapp3.1\RestaurantMenu.exe
+C:\Users\msurm\csharp-practice\Class3\RestaurantMenu\RestaurantMenu\bin\Debug\netcoreapp3.1\RestaurantMenu.deps.json
+C:\Users\msurm\csharp-practice\Class3\RestaurantMenu\RestaurantMenu\bin\Debug\netcoreapp3.1\RestaurantMenu.runtimeconfig.json
+C:\Users\msurm\csharp-practice\Class3\RestaurantMenu\RestaurantMenu\bin\Debug\netcoreapp3.1\RestaurantMenu.runtimeconfig.dev.json
+C:\Users\msurm\csharp-practice\Class3\RestaurantMenu\RestaurantMenu\bin\Debug\netcoreapp3.1\RestaurantMenu.dll
+C:\Users\msurm\csharp-practice\Class3\RestaurantMenu\RestaurantMenu\bin\Debug\netcoreapp3.1\RestaurantMenu.pdb
+C:\Users\msurm\csharp-practice\Class3\RestaurantMenu\RestaurantMenu\obj\Debug\netcoreapp3.1\RestaurantMenu.AssemblyInfoInputs.cache
+C:\Users\msurm\csharp-practice\Class3\RestaurantMenu\RestaurantMenu\obj\Debug\netcoreapp3.1\RestaurantMenu.AssemblyInfo.cs
+C:\Users\msurm\csharp-practice\Class3\RestaurantMenu\RestaurantMenu\obj\Debug\netcoreapp3.1\RestaurantMenu.csproj.CoreCompileInputs.cache
+C:\Users\msurm\csharp-practice\Class3\RestaurantMenu\RestaurantMenu\obj\Debug\netcoreapp3.1\RestaurantMenu.dll
+C:\Users\msurm\csharp-practice\Class3\RestaurantMenu\RestaurantMenu\obj\Debug\netcoreapp3.1\RestaurantMenu.pdb
+C:\Users\msurm\csharp-practice\Class3\RestaurantMenu\RestaurantMenu\obj\Debug\netcoreapp3.1\RestaurantMenu.genruntimeconfig.cache
