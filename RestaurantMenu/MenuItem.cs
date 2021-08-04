@@ -4,22 +4,23 @@ using System.Text;
 
 namespace RestaurantMenu
 {
-    public class MenuItem
+    public class MenuItems
     {
         public string Name { get; set; }
+        public double Price { get; set; }
         public string Description { get; set; }
         public string Category { get; set; }
-        public double Price { get; set; }
         public bool IsNew { get; set; }
+        public DateTime updated { get; set; }
 
-
-        public MenuItem(string name, string description, string category, double price, bool isNew)
+        public MenuItems(string name, double price, string description, string category, bool isNew, DateTime updated)
         {
             Name = name;
+            Price = price;
             Description = description;
             Category = category;
-            Price = price;
             IsNew = isNew;
+            this.updated = updated;
         }
     }
 }
