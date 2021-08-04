@@ -6,15 +6,13 @@ namespace RestaurantMenu
 {
     public class Menu
     {
-        public string MenuItem { get; set; }
-        public DateTime LastUpdated { get; set; }
+        public Dictionary<string, MenuItems> theMenu = new Dictionary<string, MenuItems>();
 
-
-        public Menu(string menuItem, DateTime lastUpdated)
+        public Menu(Dictionary<string, MenuItems> theMenu)
         {
-            MenuItem = menuItem;
-            LastUpdated = lastUpdated;
-            //LastUpdated =  DateTime.Now ??
+            this.theMenu = theMenu;
         }
+
+        public DateTime lastUpdated = new DateTime();
     }
 }

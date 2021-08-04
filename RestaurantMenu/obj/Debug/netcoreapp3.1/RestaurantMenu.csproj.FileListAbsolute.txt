@@ -10,3 +10,4 @@ C:\Users\msurm\csharp-practice\Class3\RestaurantMenu\RestaurantMenu\obj\Debug\ne
 C:\Users\msurm\csharp-practice\Class3\RestaurantMenu\RestaurantMenu\obj\Debug\netcoreapp3.1\RestaurantMenu.dll
 C:\Users\msurm\csharp-practice\Class3\RestaurantMenu\RestaurantMenu\obj\Debug\netcoreapp3.1\RestaurantMenu.pdb
 C:\Users\msurm\csharp-practice\Class3\RestaurantMenu\RestaurantMenu\obj\Debug\netcoreapp3.1\RestaurantMenu.genruntimeconfig.cache
+C:\Users\msurm\csharp-practice\Class3\RestaurantMenu\RestaurantMenu\obj\Debug\netcoreapp3.1\RestaurantMenu.csproj.AssemblyReference.cache
