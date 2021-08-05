@@ -63,5 +63,22 @@ namespace RestaurantMenu
                 lastUpdated = date;
             }
 
+
+            public void PrintMenu()
+            {
+                if (theMenu.Count > 0)
+                {
+                    foreach (KeyValuePair<string, MenuItems> entry in theMenu)
+                    {
+                        Console.WriteLine("{0}\n{1}\n******", entry.Key, entry.Value.ToString());
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("No items on the menu");
+                }
+                LastUpdate();
+                Console.WriteLine("Menu Updated " + lastUpdated);
+            }
         }
 }
