@@ -48,5 +48,20 @@ namespace RestaurantMenu
                 }
 
             }
+
+            public void LastUpdate()
+            {
+                DateTime date = new DateTime();
+                foreach (KeyValuePair<string, MenuItems> entry in theMenu)
+                {
+                    if (DateTime.Compare(entry.Value.updated, date) > 0)
+                    {
+                        date = entry.Value.updated;
+                    }
+                }
+
+                lastUpdated = date;
+            }
+
         }
 }
