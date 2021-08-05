@@ -32,5 +32,21 @@ namespace RestaurantMenu
                     goto outOfLoop;
                 }
             }
+
+            public void RemoveItem(string name, MenuItems item)
+            {
+                foreach (KeyValuePair<string, MenuItems> entry in theMenu)
+                {
+                    string mealName = entry.Key;
+                    MenuItems mealObj = entry.Value;
+
+                    if (mealObj.Equals(item) && mealName == name)
+                    {
+                        theMenu.Remove(mealName);
+                        break;
+                    }
+                }
+
+            }
         }
 }
