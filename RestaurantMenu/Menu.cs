@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Runtime.InteropServices.ComTypes;
-using System.Text;
 
 namespace RestaurantMenu
 {
@@ -33,52 +29,45 @@ namespace RestaurantMenu
                 }
             }
 
-            public void RemoveItem(string name, MenuItems item)
+        outOfLoop:
+
+            if (!isThere)
             {
-                foreach (KeyValuePair<string, MenuItems> entry in theMenu)
-                {
-                    string mealName = entry.Key;
-                    MenuItems mealObj = entry.Value;
-
-                    if (mealObj.Equals(item) && mealName == name)
-                    {
-                        theMenu.Remove(mealName);
-                        break;
-                    }
-                }
-
+                theMenu.Add(name, item);
             }
-
-            public void LastUpdate()
+            else
             {
-                DateTime date = new DateTime();
-                foreach (KeyValuePair<string, MenuItems> entry in theMenu)
-                {
-                    if (DateTime.Compare(entry.Value.updated, date) > 0)
-                    {
-                        date = entry.Value.updated;
-                    }
-                }
-
-                lastUpdated = date;
-            }
-
-
-            public void PrintMenu()
-            {
-                if (theMenu.Count > 0)
-                {
-                    foreach (KeyValuePair<string, MenuItems> entry in theMenu)
-                    {
-                        Console.WriteLine("{0}\n{1}\n******", entry.Key, entry.Value.ToString());
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("No items on the menu");
-                }
-                LastUpdate();
-                Console.WriteLine("Menu Updated " + lastUpdated);
+                throw new Exception("Item already in the menu");
             }
         }
+
+        public void RemoveItem(string name, MenuItems item)
+        {
+            foreach (KeyValuePair<string, MenuItems> entry in theMenu)
+            {
+                string mealName = entry.Key;
+                MenuItems mealObj = entry.Value;
+
+                if (mealObj.Equals(item) && mealName == name)
+                {
+                    theMenu.Remove(mealName);
+                    break;
+                }
+            }
+        }
+
+        private void LastUpdate()
+        {
+            DateTime date = new DateTime();
+            foreach (KeyValuePair<string, MenuItems> entry in theMenu)
+            {
+                if (DateTime.Compare(entry.Value.updated, date) > 0)
+                {
+                    date = entry.Value.updated;
+                }
+            }
+
+            lastUpdated = date;
+        }
+    }
 }
