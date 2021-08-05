@@ -36,6 +36,23 @@ namespace RestaurantMenu
             }
         }
 
+        public override bool Equals(object obj)
+        {
+            if (obj == this)
+            {
+                return true;
+            }
+            if (obj == null)
+            {
+                return false;
+            }
+            if (obj.GetType() != this.GetType())
+            {
+                return false;
+            }
+            MenuItems ToCompare = obj as MenuItems;
+            return ToCompare.Description == this.Description;
+        }
 
     }
 }
