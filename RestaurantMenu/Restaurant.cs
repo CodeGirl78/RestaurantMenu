@@ -2,7 +2,7 @@
 
 namespace RestaurantMenu
 {
-    class Restaurant
+    public class Restaurant
     {
         static void Main(string[] args)
         {
