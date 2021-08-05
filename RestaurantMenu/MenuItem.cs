@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Text;
 
 namespace RestaurantMenu
@@ -22,5 +23,19 @@ namespace RestaurantMenu
             IsNew = isNew;
             this.updated = updated;
         }
+
+        public string IsItNew()
+        {
+            if (IsNew)
+            {
+                return "NEW!!";
+            }
+            else
+            {
+                return "Classic Meal";
+            }
+        }
+
+
     }
 }
