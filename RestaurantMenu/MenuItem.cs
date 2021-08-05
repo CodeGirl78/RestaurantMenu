@@ -54,5 +54,9 @@ namespace RestaurantMenu
             return ToCompare.Description == this.Description;
         }
 
+        public override string ToString()
+        {
+            return IsItNew() + "\n" + Category + "\nDescription: " + Description + "\nPrice: " + Price + "$";
+        }
     }
 }
