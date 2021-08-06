@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Runtime.InteropServices.ComTypes;
+using System.Text;
 
 namespace RestaurantMenu
 {
     public class Menu
     {
         public Dictionary<string, MenuItems> theMenu = new Dictionary<string, MenuItems>();
-
-        public Menu(Dictionary<string, MenuItems> theMenu)
-        {
-            this.theMenu = theMenu;
-        }
-
         public DateTime lastUpdated = new DateTime();
 
         public void AddItem(string name, MenuItems item)
@@ -28,7 +26,6 @@ namespace RestaurantMenu
                     goto outOfLoop;
                 }
             }
-
         outOfLoop:
 
             if (!isThere)
@@ -54,20 +51,37 @@ namespace RestaurantMenu
                     break;
                 }
             }
-        }
 
-        private void LastUpdate()
+        }
+        public void LastUpdate()
         {
             DateTime date = new DateTime();
             foreach (KeyValuePair<string, MenuItems> entry in theMenu)
             {
-                if (DateTime.Compare(entry.Value.updated, date) > 0)
+                if (DateTime.Compare(entry.Value.LastUpdated, date) > 0)
                 {
-                    date = entry.Value.updated;
+                    date = entry.Value.LastUpdated;
                 }
             }
 
             lastUpdated = date;
+        }
+
+        public void PrintMenu()
+        {
+            if (theMenu.Count > 0)
+            {
+                foreach (KeyValuePair<string, MenuItems> entry in theMenu)
+                {
+                    Console.WriteLine("{0}\n{1}\n******", entry.Key, entry.Value.ToString());
+                }
+            }
+            else
+            {
+                Console.WriteLine("No items on the menu");
+            }
+            LastUpdate();
+            Console.WriteLine("Menu Last Updated " + lastUpdated);
         }
     }
 }

@@ -7,21 +7,19 @@ namespace RestaurantMenu
 {
     public class MenuItems
     {
-        public string Name { get; set; }
-        public double Price { get; set; }
-        public string Description { get; set; }
-        public string Category { get; set; }
-        public bool IsNew { get; set; }
-        public DateTime updated { get; set; }
+        public double Price { get; internal set; }
+        public string Category { get; internal set; }
+        public string Description { get; internal set; }
+        public bool IsNew { get; internal set; }
+        public DateTime LastUpdated { get; internal set; }
 
-        public MenuItems(string name, double price, string description, string category, bool isNew, DateTime updated)
+        public MenuItems(double price, string category, string description, bool isNew, DateTime LastUpdated)
         {
-            Name = name;
             Price = price;
-            Description = description;
             Category = category;
+            Description = description;
             IsNew = isNew;
-            this.updated = updated;
+            this.LastUpdated = LastUpdated;
         }
 
         public string IsItNew()
